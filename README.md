@@ -39,7 +39,6 @@ This boilerplate includes:
 - [Gas reporter](https://github.com/cgewecke/hardhat-gas-reporter/tree/master)
 - [Commitlint](https://github.com/conventional-changelog/commitlint)
 - [Standard version](https://github.com/conventional-changelog/standard-version)
-- [Uniswap](https://github.com/Uniswap/uniswap-v2-periphery) + [Internal tooling](./test/utils/uniswap.ts)
 
 ---
 
