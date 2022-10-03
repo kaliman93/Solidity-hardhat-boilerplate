@@ -1,7 +1,6 @@
 import 'dotenv/config';
 import '@nomicfoundation/hardhat-toolbox';
 import { removeConsoleLog } from 'hardhat-preprocessor';
-import 'hardhat-deploy';
 import { HardhatUserConfig, MultiSolcUserConfig, NetworksUserConfig } from 'hardhat/types';
 import * as env from './utils/env';
 import 'tsconfig-paths/register';
@@ -11,14 +10,11 @@ const networks: NetworksUserConfig =
     ? {}
     : {
         hardhat: {
+          hardfork: 'merge',
           forking: {
             enabled: process.env.FORK ? true : false,
             url: env.getNodeUrl('ethereum'),
           },
-        },
-        kovan: {
-          url: env.getNodeUrl('kovan'),
-          accounts: env.getAccounts('kovan'),
         },
         ethereum: {
           url: env.getNodeUrl('ethereum'),
@@ -28,11 +24,6 @@ const networks: NetworksUserConfig =
 
 const config: HardhatUserConfig = {
   defaultNetwork: 'hardhat',
-  namedAccounts: {
-    deployer: {
-      default: 0,
-    },
-  },
   mocha: {
     timeout: process.env.MOCHA_TIMEOUT || 300000,
   },
