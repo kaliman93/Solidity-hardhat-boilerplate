@@ -46,8 +46,6 @@
     "@codechecks/client": "0.1.12",
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
-    "@dethcrypto/eth-sdk": "0.3.3",
-    "@dethcrypto/eth-sdk-client": "0.1.6",
     "@ethersproject/abi": "^5.7.0",
     "@ethersproject/providers": "^5.7.1",
     "@nomicfoundation/hardhat-chai-matchers": "^1.0.3",
